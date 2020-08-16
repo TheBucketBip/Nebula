@@ -1,6 +1,7 @@
 
 /obj/item/gun/projectile/pistol
 	name = "pistol"
+	desc = "The Lumoco Arms P15 Echo. A compact 10mm handgun."
 	icon = 'icons/obj/guns/pistol.dmi'
 	icon_state = ICON_STATE_WORLD
 	load_method = MAGAZINE

@@ -112,3 +112,37 @@
 		to_chat(user, "\The [launcher] has \a [launcher.chambered] loaded.")
 	else
 		to_chat(user, "\The [launcher] is empty.")
+
+
+//Rifle 2
+
+/obj/item/gun/projectile/automatic/old_rifle
+	name = "worn assault rifle"
+	desc = "An old battle-worn rifle made out of various weapon parts haphazardly thrown together. Its miracle it doesnt explode in your hands when you fire it."
+	icon = 'icons/obj/guns/bullpup_rifle.dmi'
+	w_class = ITEM_SIZE_HUGE
+	force = 10
+	caliber = CALIBER_RIFLE
+	origin_tech = "{'combat':5,'materials':3}"
+	ammo_type = /obj/item/ammo_casing/rifle
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/rifle
+	allowed_magazines = /obj/item/ammo_magazine/rifle
+	accuracy = 2
+	accuracy_power = 7
+	jam_chance = 15
+	one_hand_penalty = 6
+	bulk = GUN_BULK_RIFLE
+	burst_delay = 1
+	mag_insert_sound = 'sound/weapons/guns/interaction/batrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/batrifle_magout.ogg'
+	material = /decl/material/solid/metal/steel
+	matter = list(
+		/decl/material/solid/metal/silver = MATTER_AMOUNT_REINFORCEMENT,
+		/decl/material/solid/gemstone/diamond = MATTER_AMOUNT_TRACE
+	)
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, use_launcher=null, one_hand_penalty=8,  burst_accuracy=null,          dispersion=null),
+		list(mode_name="full auto",      can_autofire=1, burst=1, fire_delay=1, one_hand_penalty=7, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2))
+	)
