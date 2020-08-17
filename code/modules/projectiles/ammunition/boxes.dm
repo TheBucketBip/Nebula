@@ -133,6 +133,17 @@
 	max_ammo = 10
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/magnum
+	name = "magnum magazine"
+	icon_state = "pistol"
+	origin_tech = "{'combat':2}"
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL_MAGNUM
+	material = /decl/material/solid/metal/steel
+	ammo_type = /obj/item/ammo_casing/pistol/magnum
+	max_ammo = 7
+	multiple_sprites = 1
+
 /obj/item/ammo_magazine/pistol/empty
 	initial_ammo = 0
 

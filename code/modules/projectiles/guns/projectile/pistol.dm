@@ -73,3 +73,25 @@
 	icon = 'icons/obj/guns/holdout_pistol_silencer.dmi'
 	icon_state = ICON_STATE_WORLD
 	w_class = ITEM_SIZE_SMALL
+
+/obj/item/gun/projectile/magnum
+	name = "magnum pistol"
+	desc = "A large handgun with a large caliber. It's bulky and has a fair bit of recoil."
+	icon = 'icons/obj/guns/magnum_pistol.dmi'
+	icon_state = ICON_STATE_WORLD
+	load_method = MAGAZINE
+	caliber = CALIBER_PISTOL_MAGNUM
+	force = 10
+	fire_delay = 8
+	magazine_type = /obj/item/ammo_magazine/magnum
+	allowed_magazines = /obj/item/ammo_magazine/magnum
+	accuracy_power = 5
+	safety_icon = null
+	ammo_indicator = FALSE
+
+/obj/item/gun/projectile/magnum/update_base_icon()
+	var/base_state = get_world_inventory_state()
+	if(!length(ammo_magazine?.stored_ammo) && check_state_in_icon("[base_state]-e", icon))
+		icon_state = "[base_state]-e"
+	else
+		icon_state = base_state
