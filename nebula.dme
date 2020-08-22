@@ -2899,6 +2899,7 @@
 #include "code\modules\species\outsider\random.dm"
 #include "code\modules\species\station\golem.dm"
 #include "code\modules\species\station\monkey.dm"
+#include "code\modules\species\station\moth.dm"
 #include "code\modules\species\station\station.dm"
 #include "code\modules\species\station\utility_frame.dm"
 #include "code\modules\spells\artifacts.dm"

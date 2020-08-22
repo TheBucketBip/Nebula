@@ -13,7 +13,7 @@
 	name = "Bald"
 	icon_state = "bald"
 	gender = MALE
-	species_allowed = list(SPECIES_HUMAN)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_MOTH)
 	flags = VERY_SHORT | HAIR_BALD
 
 /datum/sprite_accessory/hair/short
@@ -29,6 +29,7 @@
 /datum/sprite_accessory/hair/short2
 	name = "Short Hair 2"
 	icon_state = "hair_shorthair3"
+	species_allowed = list(SPECIES_HUMAN, SPECIES_MOTH)
 
 /datum/sprite_accessory/hair/cut
 	name = "Cut Hair"
@@ -139,6 +140,7 @@
 /datum/sprite_accessory/hair/bedhead2
 	name = "Bedhead 2"
 	icon_state = "hair_bedheadv2"
+	species_allowed = list(SPECIES_HUMAN, SPECIES_MOTH)
 
 /datum/sprite_accessory/hair/bedhead3
 	name = "Bedhead 3"
@@ -280,6 +282,7 @@
 	name = "Feather"
 	icon_state = "hair_feather"
 	flags = HAIR_TIEABLE
+	species_allowed = list(SPECIES_HUMAN, SPECIES_MOTH)
 
 /datum/sprite_accessory/hair/hitop
 	name = "Hitop"
@@ -447,6 +450,7 @@
 	name = "Volaju"
 	icon_state = "hair_volaju"
 	flags = HAIR_TIEABLE
+	species_allowed = list(SPECIES_HUMAN, SPECIES_MOTH)
 
 /datum/sprite_accessory/hair/longeralt2
 	name = "Long Hair Alt 2"
