@@ -1,7 +1,7 @@
 /obj/item/gun/projectile/revolver
 	name = "revolver"
 	desc = "The al-Maliki & Mosley Magnum Double Action is a choice revolver for when you absolutely, positively need to put a hole in the other guy."
-	icon = 'icons/obj/guns/revolvers.dmi'
+	icon = 'icons/obj/guns/revolvers/revolvers.dmi'
 	icon_state = ICON_STATE_WORLD
 	safety_icon = "safety"
 	caliber = CALIBER_PISTOL_MAGNUM
@@ -67,3 +67,23 @@
 	cap = FALSE
 	update_icon()
 	return 1
+
+/obj/item/gun/projectile/revolver/holdout
+	name = "holdout revolver"
+	desc = "A small and very compact revolver with a meager cartridge, for when theres no other option left."
+	icon = 'icons/obj/guns/revolvers/holdout.dmi'
+	safety_icon = null
+	max_shells = 5
+	fire_delay = 2
+	caliber = CALIBER_PISTOL_SMALL
+	ammo_type = /obj/item/ammo_casing/pistol/small
+	w_class = ITEM_SIZE_SMALL
+	accuracy = 4
+	accuracy_power = 8
+	one_hand_penalty = 0
+	bulk = 0
+
+/obj/item/gun/projectile/revolver/holdout/miami
+	desc = "You feel like you should wear a snake mask while using this."
+	throwforce = 500
+	throw_speed = 10

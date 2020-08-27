@@ -112,3 +112,27 @@
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn/empty
 	starts_loaded = FALSE
+
+
+/obj/item/gun/projectile/shotgun/pump/combat
+	name = "combat shotgun"
+	desc = "Built for close quarters combat, the Hephaestus Industries KS-40 is widely regarded as a weapon of choice for repelling boarders."
+	icon = 'icons/obj/guns/shotgun/combat.dmi'
+	icon_state = ICON_STATE_WORLD
+	max_shells = 6
+	w_class = ITEM_SIZE_HUGE
+	force = 15
+	obj_flags =  OBJ_FLAG_CONDUCTIBLE
+	slot_flags = SLOT_BACK
+	caliber = CALIBER_SHOTGUN
+	origin_tech = "{'combat':8,'materials':2}"
+	load_method = SINGLE_CASING
+	ammo_type = /obj/item/ammo_casing/shotgun
+	handle_casings = HOLD_CASINGS
+	one_hand_penalty = 10
+	bulk = 6
+	load_sound = 'sound/weapons/guns/interaction/shotgun_instert.ogg'
+
+/obj/item/gun/projectile/shotgun/pump/combat/Fire(mob/living/user)
+	..()
+	pump()

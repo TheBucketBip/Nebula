@@ -229,7 +229,7 @@
 				/obj/item/chems/food/snacks/egg/lizard = 3)
 
 /obj/random/drinkingglass
-	name = "random drinking glass" 
+	name = "random drinking glass"
 	desc = "This is a random drinking glass."
 	icon = 'icons/obj/drink_glasses/square.dmi'
 	icon_state = "square"
@@ -286,7 +286,7 @@
 /obj/random/projectile
 	name = "Random Projectile Weapon"
 	desc = "This is a random projectile weapon."
-	icon = 'icons/obj/guns/revolvers.dmi'
+	icon = 'icons/obj/guns/revolvers/revolvers.dmi'
 	icon_state = "revolver"
 
 /obj/random/projectile/spawn_choices()

@@ -38,7 +38,7 @@
 		overlays += image(icon, "[get_world_inventory_state()]mag-[round(ammo_magazine.stored_ammo.len,5)]")
 
 /obj/item/gun/projectile/automatic/assault_rifle
-	name = "assault rifle"
+	name = "bullpup rifle"
 	desc = "The Z8 Bulldog is an older model bullpup carbine. Makes you feel like a space marine when you hold it."
 	icon = 'icons/obj/guns/bullpup_rifle.dmi'
 	w_class = ITEM_SIZE_HUGE
@@ -116,25 +116,25 @@
 
 //Rifle 2
 
-/obj/item/gun/projectile/automatic/old_rifle
-	name = "worn assault rifle"
-	desc = "An old battle-worn rifle made out of various weapon parts haphazardly thrown together. Its miracle it doesnt explode in your hands when you fire it."
-	icon = 'icons/obj/guns/bullpup_rifle.dmi'
+/obj/item/gun/projectile/automatic/military_rifle
+	name = "assault rifle"
+	desc = "The rugged STS-35 is a durable automatic weapon of a make popular on the frontier worlds. Originally produced by Hephaestus. The serial number has been scratched off."
+	icon = 'icons/obj/guns/assault_rifle.dmi'
 	w_class = ITEM_SIZE_HUGE
 	force = 10
 	caliber = CALIBER_RIFLE
-	origin_tech = "{'combat':5,'materials':3}"
+	origin_tech = "{'combat':8,'materials':3}"
 	ammo_type = /obj/item/ammo_casing/rifle
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/rifle
-	allowed_magazines = /obj/item/ammo_magazine/rifle
+	magazine_type = /obj/item/ammo_magazine/rifle/kalash
+	allowed_magazines = /obj/item/ammo_magazine/rifle/kalash
+	auto_eject = 0
 	accuracy = 2
 	accuracy_power = 7
-	jam_chance = 15
-	one_hand_penalty = 6
-	bulk = GUN_BULK_RIFLE
-	burst_delay = 1
+	one_hand_penalty = 8
+	bulk = GUN_BULK_RIFLE + 1
+	burst_delay = 2
 	mag_insert_sound = 'sound/weapons/guns/interaction/batrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/batrifle_magout.ogg'
 	material = /decl/material/solid/metal/steel
@@ -144,5 +144,60 @@
 	)
 	firemodes = list(
 		list(mode_name="semi auto",      burst=1,    fire_delay=null, use_launcher=null, one_hand_penalty=8,  burst_accuracy=null,          dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, use_launcher=null, one_hand_penalty=9,  burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",   burst=5, fire_delay=null, one_hand_penalty=5, burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(0.6, 0.6, 1.0, 1.0, 1.2)),
 		list(mode_name="full auto",      can_autofire=1, burst=1, fire_delay=1, one_hand_penalty=7, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2))
 	)
+
+
+/obj/item/gun/projectile/automatic/military_rifle/update_base_icon()
+	if(ammo_magazine)
+		if(ammo_magazine.stored_ammo.len)
+			icon_state = "[get_world_inventory_state()]-loaded"
+		else
+			icon_state = "[get_world_inventory_state()]-empty"
+	else
+		icon_state = get_world_inventory_state()
+
+
+// Machine Pistol
+
+/obj/item/gun/projectile/automatic/machine_pistol
+	name = "machine pistol"
+	desc = "The Hephaestus Industries MP6 Vesper, A fairly common machine pistol. Sometimes refered to as an 'uzi' by the backwater spacers it is often associated with."
+	icon = 'icons/obj/guns/machine_pistol.dmi'
+	safety_icon = "safety"
+	caliber = CALIBER_PISTOL
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ESOTERIC = 3)
+	ammo_type = /obj/item/ammo_casing/pistol
+	magazine_type = /obj/item/ammo_magazine/machine_pistol
+	allowed_magazines = /obj/item/ammo_magazine/machine_pistol //more damage compared to the wt550, smaller mag size
+	burst_delay = 1.5
+	one_hand_penalty = 2
+	accuracy_power = 7
+	one_hand_penalty = 3
+	bulk = -1
+	load_method = MAGAZINE
+	ammo_indicator = TRUE
+	matter = list(
+		/decl/material/solid/metal/silver = MATTER_AMOUNT_REINFORCEMENT,
+		/decl/material/solid/gemstone/diamond = MATTER_AMOUNT_TRACE
+	)
+
+	firemodes = list(
+		list(mode_name="semi auto",       burst=1, fire_delay=null,    move_delay=null, one_hand_penalty=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    one_hand_penalty=1, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=2, burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(0.6, 0.6, 1.0, 1.0, 1.2)),
+		)
+
+/obj/item/gun/projectile/automatic/machine_pistol/update_base_icon()
+	var/base_state = get_world_inventory_state()
+	if(!length(ammo_magazine?.stored_ammo) && check_state_in_icon("[base_state]-e", icon))
+		icon_state = "[base_state]-e"
+	else
+		icon_state = base_state
+
+/obj/item/gun/projectile/automatic/machine_pistol/on_update_icon()
+	..()
+	if(ammo_magazine)
+		overlays += image(icon, "[get_world_inventory_state()]-mag")

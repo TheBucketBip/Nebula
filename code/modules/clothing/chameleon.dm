@@ -372,7 +372,7 @@
 /obj/item/gun/energy/chameleon
 	name = "chameleon gun"
 	desc = "A hologram projector in the shape of a gun. There is a dial on the side to change the gun's disguise."
-	icon = 'icons/obj/guns/revolvers.dmi'
+	icon = 'icons/obj/guns/revolvers/revolvers.dmi'
 	icon_state = "revolver"
 	w_class = ITEM_SIZE_SMALL
 	origin_tech = "{'combat':2,'materials':2,'esoteric':8}"

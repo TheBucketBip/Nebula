@@ -133,9 +133,20 @@
 	max_ammo = 10
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/machine_pistol
+	name = "machine pistol magazine"
+	icon_state = "machine_pistol"
+	origin_tech = "{'combat':2}"
+	mag_type = MAGAZINE
+	caliber = CALIBER_PISTOL
+	material = /decl/material/solid/metal/steel
+	ammo_type = /obj/item/ammo_casing/pistol
+	max_ammo = 16
+	multiple_sprites = 1
+
 /obj/item/ammo_magazine/magnum
 	name = "magnum magazine"
-	icon_state = "pistol"
+	icon_state = "magnum"
 	origin_tech = "{'combat':2}"
 	mag_type = MAGAZINE
 	caliber = CALIBER_PISTOL_MAGNUM
@@ -199,14 +210,20 @@
 	max_ammo = 8
 
 /obj/item/ammo_magazine/rifle
-	name = "assault rifle magazine"
+	name = "bullpup rifle magazine"
 	icon_state = "bullup"
 	origin_tech = "{'combat':2}"
 	mag_type = MAGAZINE
 	caliber = CALIBER_RIFLE
 	material = /decl/material/solid/metal/steel
 	ammo_type = /obj/item/ammo_casing/rifle
-	max_ammo = 15 //if we lived in a world where normal mags had 30 rounds, this would be a 20 round mag
+	max_ammo = 20 //we live in a world where normal mags have 30 rounds.
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/rifle/kalash
+	name = "assault rifle magazine"
+	icon_state = "assault_rifle"
+	max_ammo = 30
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/rifle/empty

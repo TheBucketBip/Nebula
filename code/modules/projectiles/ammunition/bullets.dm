@@ -31,7 +31,7 @@
 	icon = 'icons/obj/ammo/casings/small_pistol.dmi'
 	caliber = CALIBER_PISTOL_SMALL
 	projectile_type = /obj/item/projectile/bullet/pistol/holdout
-	
+
 /obj/item/ammo_casing/pistol/small/rubber
 	desc = "A small pistol rubber bullet casing."
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber/holdout
@@ -154,6 +154,7 @@
 /obj/item/ammo_casing/rifle
 	desc = "A military rifle bullet casing."
 	caliber = CALIBER_RIFLE
+	color = COLOR_POLISHED_BRASS
 	projectile_type = /obj/item/projectile/bullet/rifle
 	icon = 'icons/obj/ammo/casings/rifle.dmi'
 

@@ -95,3 +95,26 @@
 		icon_state = "[base_state]-e"
 	else
 		icon_state = base_state
+
+
+/obj/item/gun/projectile/pistol/military
+	name = "military pistol"
+	desc = "The Lumoco Arms P17 Bull. A military grade handgun known for it's simple and effective design."
+	icon = 'icons/obj/guns/military_pistol.dmi'
+	icon_state = ICON_STATE_WORLD
+	load_method = MAGAZINE
+	caliber = CALIBER_PISTOL
+	magazine_type = /obj/item/ammo_magazine/pistol
+	allowed_magazines = /obj/item/ammo_magazine/pistol
+	accuracy = 1
+	burst_delay = 2
+	accuracy_power = 8
+	waterproof = TRUE
+	safety_icon = "safety"
+	ammo_indicator = TRUE
+
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1, fire_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null, one_hand_penalty=4, burst_accuracy=list(-2,-3),       dispersion=list(0.0, 0.6, 1.0))
+		)
+
