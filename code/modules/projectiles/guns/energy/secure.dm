@@ -39,3 +39,15 @@
 /obj/item/gun/energy/laser/secure/on_update_icon()
 	. = ..()
 	overlays += get_mutable_overlay(icon, "[icon_state]_stripe", COLOR_BLUE_GRAY)
+
+/obj/item/gun/energy/gun/rifle/secure
+	name = "smartgun"
+	desc = "The LAE50E energy carbine. An energy rifle with none of the intimidation of one."
+	icon = 'icons/obj/guns/energy_rifle_sec.dmi'
+	icon_state = ICON_STATE_WORLD
+	charge_cost = 10
+	slot_flags = SLOT_LOWER_BODY|SLOT_BACK
+	w_class = ITEM_SIZE_HUGE
+	item_state = null	//so the human update icon uses the icon_state instead.
+	req_access = list(list(access_brig, access_bridge))
+	authorized_modes = list(ALWAYS_AUTHORIZED, AUTHORIZED)

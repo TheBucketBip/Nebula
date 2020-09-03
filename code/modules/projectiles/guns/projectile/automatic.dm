@@ -160,6 +160,13 @@
 		icon_state = get_world_inventory_state()
 
 
+/obj/item/gun/projectile/automatic/military_rifle/kalash
+	desc = "A custom-made STS-35 made out of higher quality materials and given a wood finish. Holding this makes you feel like a true ruski."
+	icon = 'icons/obj/guns/assault_rifle_fancy.dmi'
+	bulk = GUN_BULK_RIFLE - 1
+	accuracy = 4
+	accuracy_power = 9
+
 // Machine Pistol
 
 /obj/item/gun/projectile/automatic/machine_pistol
