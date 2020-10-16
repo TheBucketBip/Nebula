@@ -1,5 +1,13 @@
 //Alphabetical order of civilian jobs.
 
+/obj/item/clothing/under/rank/employee
+	desc = "A drab grey jumpsuit worn by employess of Ridge Network Industries."
+	name = "bartender's uniform"
+	icon_state = "employee"
+	item_state = "employee"
+	worn_state = "employee"
+	gender_icons = 1
+
 /obj/item/clothing/under/rank/bartender
 	desc = "It looks like it could use some more flair."
 	name = "bartender's uniform"
