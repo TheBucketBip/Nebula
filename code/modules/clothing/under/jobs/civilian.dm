@@ -1,8 +1,8 @@
 //Alphabetical order of civilian jobs.
 
 /obj/item/clothing/under/rank/employee
-	desc = "A drab grey jumpsuit worn by employess of Ridge Network Industries."
-	name = "bartender's uniform"
+	desc = "A drab grey jumpsuit worn by 'employees' of Ridge Network Industries."
+	name = "'Ridge Network Industries' jumpsuit"
 	icon_state = "employee"
 	item_state = "employee"
 	worn_state = "employee"

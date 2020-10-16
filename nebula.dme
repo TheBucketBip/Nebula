@@ -1622,6 +1622,7 @@
 #include "code\modules\clothing\suits\armor\adminbus_and_memes.dm"
 #include "code\modules\clothing\suits\armor\bulletproof.dm"
 #include "code\modules\clothing\suits\armor\craftable.dm"
+#include "code\modules\clothing\suits\armor\kevlar.dm"
 #include "code\modules\clothing\suits\armor\laserproof.dm"
 #include "code\modules\clothing\suits\armor\merc.dm"
 #include "code\modules\clothing\suits\armor\plate_carrier.dm"
