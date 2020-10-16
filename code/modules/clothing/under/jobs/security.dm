@@ -8,6 +8,18 @@
 /*
  * Security
  */
+ /obj/item/clothing/under/rank/marshal
+	name = "'Ridge Network Industries'Security jumpsuit"
+	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection. Issued to RNI Security detail."
+	icon_state = "marshal"
+	item_state = "marshal"
+	worn_state = "marshal"
+	gender_icons = 1
+	armor = list(
+		melee = ARMOR_MELEE_SMALL
+		)
+	siemens_coefficient = 0.9
+
 /obj/item/clothing/under/rank/warden
 	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for more robust protection. It has the word \"Warden\" written on the shoulders."
 	name = "warden's jumpsuit"
@@ -106,7 +118,7 @@
 	icon = 'icons/clothing/head/detective.dmi'
 	color = "#725443"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
+		melee = ARMOR_MELEE_RESISTANT,
 		laser = ARMOR_LASER_SMALL,
 		energy = ARMOR_ENERGY_MINOR
 		)
@@ -157,10 +169,10 @@
 	icon = 'icons/clothing/suit/hos.dmi'
 	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS|SLOT_LEGS
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR, 
-		bullet = ARMOR_BALLISTIC_PISTOL, 
-		laser = ARMOR_LASER_HANDGUNS, 
-		energy = ARMOR_ENERGY_MINOR, 
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_PISTOL,
+		laser = ARMOR_LASER_HANDGUNS,
+		energy = ARMOR_ENERGY_MINOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
 	flags_inv = HIDEJUMPSUIT
