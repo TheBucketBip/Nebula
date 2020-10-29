@@ -4,7 +4,7 @@
 	desc = "A drab grey jumpsuit worn by 'employees' of Ridge Network Industries."
 	name = "'Ridge Network Industries' jumpsuit"
 	icon_state = "employee"
-	item_state = "employee"
+	item_state = "gy_suit"
 	worn_state = "employee"
 	gender_icons = 1
 

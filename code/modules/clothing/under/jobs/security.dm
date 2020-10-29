@@ -8,17 +8,7 @@
 /*
  * Security
  */
- /obj/item/clothing/under/rank/marshal
-	name = "'Ridge Network Industries'Security jumpsuit"
-	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection. Issued to RNI Security detail."
-	icon_state = "marshal"
-	item_state = "marshal"
-	worn_state = "marshal"
-	gender_icons = 1
-	armor = list(
-		melee = ARMOR_MELEE_SMALL
-		)
-	siemens_coefficient = 0.9
+
 
 /obj/item/clothing/under/rank/warden
 	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for more robust protection. It has the word \"Warden\" written on the shoulders."
@@ -75,6 +65,18 @@
 	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection."
 	icon_state = "swatunder"
 	worn_state = "swatunder"
+	gender_icons = 1
+	armor = list(
+		melee = ARMOR_MELEE_SMALL
+		)
+	siemens_coefficient = 0.9
+
+/obj/item/clothing/under/rank/marshal
+	name = "RNI security jumpsuit"
+	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection."
+	icon_state = "marshal"
+	item_state = "lb_suit"
+	worn_state = "marshal"
 	gender_icons = 1
 	armor = list(
 		melee = ARMOR_MELEE_SMALL
